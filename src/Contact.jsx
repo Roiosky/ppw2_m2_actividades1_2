@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import '../src/style/Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,37 +43,49 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <h1>Contáctenos</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nombre:</label>
-          <input
-            type="text"
-            name="nombre"
-            value={formData.nombre}
-            onChange={handleChange}
-          />
+    <div className="contact-page">
+
+      <main className="main-content">
+        <div className="form-card">
+          <h1>Contáctenos</h1>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Nombre:</label>
+              <input
+                type="text"
+                name="nombre"
+                value={formData.nombre}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Correo:</label>
+              <input
+                type="email"
+                name="correo"
+                value={formData.correo}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Mensaje:</label>
+              <textarea
+                name="mensaje"
+                value={formData.mensaje}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
         </div>
-        <div>
-          <label>Correo:</label>
-          <input
-            type="email"
-            name="correo"
-            value={formData.correo}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Mensaje:</label>
-          <textarea
-            name="mensaje"
-            value={formData.mensaje}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
+      </main>
+
+      <footer className="footer">
+        <p>&copy; 2024 biodegradable. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 };

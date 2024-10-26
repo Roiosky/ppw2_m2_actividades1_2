@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
+import Home from "./Home.jsx";
 import Products from "./Products";
 import Contact from "./Contact";
+
+
 
 function App() {
   return (
     <Router>
-      <nav>
-        <ul>
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/productos">Productos</Link></li>
-          <li><Link to="/contacto">Contáctenos</Link></li>
-        </ul>
-      </nav>
+       <header className="header">
+        <nav>
+          <ul className="nav-list">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/contacto">Contáctenos</a></li>
+          </ul>
+        </nav>
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
