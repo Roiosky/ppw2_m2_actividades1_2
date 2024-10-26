@@ -1,6 +1,6 @@
-Trabajo de Eliana y Roicer. 
+Trabajo de Eliana, Jero y Roicer.
 
-Resolución de ejercicio No. 3 
+Resolución de ejercicio No. 3
 
 SPA (Single Page Application): Es un tipo de aplicación web que solo carga una vez la página completa. Después, cuando navegas entre secciones, solo cambia el contenido necesario sin recargar toda la página. Así es más rápido.
 
