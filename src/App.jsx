@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
-import Products from "./components/Products";
-import Contact from "./components/Contact";
+import Home from "./Home";
+import Products from "./Products";
+import Contact from "./Contact";
 
 function App() {
   return (
